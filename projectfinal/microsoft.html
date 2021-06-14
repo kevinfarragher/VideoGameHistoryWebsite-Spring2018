@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Microsoft</title>
+    <link rel="stylesheet" href="projectcss.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+	
+	function checkAnswer(correctAnswer, questionNumber){
+	var guess=document.querySelector(questionNumber);
+	if(guess.value==correctAnswer) {
+	alert("Correct!");
+	}
+	else{
+	alert( "Wrong. The answer is " + correctAnswer);
+	}
+	}
+
+	function contentDisplay(videoGameConsole, checkConsole) {
+	var content=document.querySelector(videoGameConsole);
+	var check=document.querySelector(checkConsole);
+	if(check.checked) {
+	content.style.display="block";
+	}
+	else{
+	content.style.display="none";
+	}
+	}
+	
+	</script>
+</head>
+ 
+<body>
+<div id="wrapper">
+    
+	<header>
+	<span class="fadeinheader"> Microsoft </span>
+	</header>
+	
+	<nav>
+	<ul>
+	<li> <a href="index.html"> Home </a> </li>
+	<li> <a href="microsoft.html"> Microsoft </a> </li>
+	<li> <a href="nintendo.html"> Nintendo </a> </li>
+	<li> <a href="sony.html"> Sony </a> </li>
+	</ul>
+	<img src="xboxlogo.png" class="shakeimage" width="125px" height="50px">
+	</nav>
+	
+	<aside>
+	<h3>Trivia Questions</h3>
+	<div class="question">
+	Who helped unveil the Xbox Original?<br>
+	<div class="choicesSize">
+	a. Floyd Mayweather <br>
+	b. Dwayne Johnson	<br>
+	c. John Cena <br> 
+	</div>
+	</div>
+	
+	<form>
+	<input type="text" class="guess" id="guess1">
+	<input type="submit" value="check answer" class="answer" onclick="checkAnswer('b.', '#guess1')"> <br> <br>
+	</form>
+	
+	<div class="question">
+	What was the last Xbox Original game released?<br>
+	<div class="choicesSize">
+	a. Madden NFL 09 <br>
+	b. The Godfather: The Game	<br>
+	c. FIFA Street 2 <br> 
+	</div>
+	</div>
+	
+	<form>
+	<input type="text" class="guess" id="guess2">
+	<input type="submit" value="check answer" class="answer" onclick="checkAnswer('a.', '#guess2')"> <br> <br>
+	</form>
+	
+	<div class="question">
+	What was the failure rate of Xbox 360's in the first 4 years of its release?<br>
+	<div class="choicesSize">
+	a. 5.6 <br>
+	b. 10.2	<br>
+	c. 23.7 <br>
+    </div>	
+	</div>
+	
+	<form>
+	<input type="text" class="guess" id="guess3">
+	<input type="submit" value="check answer" class="answer" onclick="checkAnswer('c.', '#guess3')"> <br> <br>
+	</form>
+	
+	<img src="questionmark.png" class="questionmark" width="50" height="50">
+	</aside>
+	
+	<main class="othermain">
+	
+	<form>
+	<fieldset> <legend> Choose contents </legend>
+	<input type="checkbox" id="checkboxXboxOriginal" onchange="contentDisplay('#xboxoriginal', '#checkboxXboxOriginal')" checked> Xbox Original
+	<input type="checkbox" id="checkboxXbox360" onchange="contentDisplay('#xbox360', '#checkboxXbox360')" checked> Xbox 360
+	<input type="checkbox" id="checkboxXboxOne" onchange="contentDisplay('#xboxone', '#checkboxXboxOne')" checked> Xbox One
+	</fieldset>
+	</form>
+	
+	<div id="xboxoriginal">
+	<h1> Xbox Original </h1>
+	<img  class="floatright"src="xboxoriginal.jpg" width="35%">
+	<p>The <a href="https://en.wikipedia.org/wiki/Xbox_(console)"><span class="bold">Xbox Original</span></a> was 
+	   Microsoft's first ever console, released on November 15, 2001. The Xbox was stronger graphically compared 
+	   to its rivals, and was the first console to feature a built-in hard disk. In 2002, Xbox Live released for the
+       console, having support with its original consoles through an Ethernet port. The service gave Microsoft a head
+       start in online gaming, helping it get a head start against its rivals in online gaming. The console has sold
+       24 million units worldwide. </p> 
+	</div>
+	
+	<div id="xbox360">
+	<h1> Xbox 360 </h1>
+	<img class="floatright" src="xbox360.jpg" width="35%">
+	<p>The <a href="https://en.wikipedia.org/wiki/Xbox_360"><span class="bold">Xbox 360</span></a> was the successor 
+	   to the Xbox Original, released on November 22, 2005. The console featured a much more expanded Xbox Live 
+	   online service, being updated regularly. Xbox Live allowed users to play games online with friends, download 
+	   games and game trials, purchase music and TV programs, and allowed access to 3rd-party content. The console 
+	   included wireless controllers, more hard drive storage, and a purchasable Kinect motion camera. The console 
+	   has sold 84 million units worldwide, being the 6th-highest-selling video game console in history. </p>
+	</div>
+	 
+	<div id="xboxone">
+	<h1> Xbox One </h1>
+	<img class="floatright" src="xboxone.jpg" width="35%">
+	<p>The <a href="https://en.wikipedia.org/wiki/Xbox_One"><span class="bold">Xbox One</span></a> was the successor to 
+	   the Xbox 360, released on November 22, 2013. The console was marketed as an "all-in-one" entertainment system.
+       Its controller was redesigned from the Xbox 360's to feature a redesigned body, D-pad, and triggers. The console 
+	   places great emphasis on cloud computing, social networking features, and the ability to record or share video
+	   clips and screenshots form gameplay. The console can play Blu-ray Discs and overlay live TV programming. The 
+	   console originally included a redesigned Kinect 2.0 sensor, providing improved motion tracking and voice 
+	   recognition. A higher-end version, the Xbox One X, was released in Novmeber 2017, featuring upgraded hardware
+	   specs and 4K support. The console has sold 18 million units worldwide.</p>
+	</div>
+
+	<table id="table">
+		<caption> Popular Microsoft Franchises </caption>
+		<tr>	
+			<th> Microsoft Franchise </th>
+			<th> Genre </th>
+		</tr>
+		<tr>
+			<td> Halo </td>
+			<td> 1st-Person Shooter </td>
+		</tr>
+		<tr>
+			<td> Forza </td>
+			<td> Racing </td>
+		</tr>
+		<tr>
+			<td> Gears of War </td>
+			<td> 3rd-Person Shooter </td>
+		</tr>
+		<tr>
+			<td> Mass Effect </td>
+			<td> Action/RPG </td>
+		</tr>
+		<tr>
+			<td> Crackdown </td>
+			<td> Sandbox/Adventure </td>
+		</tr>
+	</table>
+ 
+	</main>
+	
+	<footer>
+	kfarragher21@jcu.edu<br>
+	&copy;Kevin Farragher
+	</footer>
+	
+</div>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sony</title>
+    <link rel="stylesheet" href="projectcss.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+	
+	function checkAnswer(correctAnswer, questionNumber){
+	var guess=document.querySelector(questionNumber);
+	if(guess.value==correctAnswer) {
+	alert("Correct!");
+	}
+	else{
+	alert( "Wrong. The answer is " + correctAnswer);
+	}
+	}
+
+	function contentDisplay(videoGameConsole, checkConsole) {
+	var content=document.querySelector(videoGameConsole);
+	var check=document.querySelector(checkConsole);
+	if(check.checked) {
+	content.style.display="block";
+	}
+	else{
+	content.style.display="none";
+	}
+	}
+	
+	</script>
+</head>
+ 
+<body>
+<div id="wrapper">
+    
+	<header>
+	<span class="fadeinheader"> Sony </span>
+	</header>
+	
+	<nav>
+	<ul>
+	<li> <a href="index.html"> Home </a> </li>
+	<li> <a href="microsoft.html"> Microsoft </a> </li>
+	<li> <a href="nintendo.html"> Nintendo </a> </li>
+	<li> <a href="sony.html"> Sony </a> </li>
+	</ul>
+	<img src="playstationlogo.jpg" class="shakeimage" width="125px" height="50px">
+	</nav>
+	
+	<aside>
+	<h3>Trivia Questions</h3>
+	<div class="question">
+	Which company did Sony originally partner with when creating the Playstation?<br>
+	<div class="choicesSize">
+	a. Sega <br>
+	b. Nintendo	<br>
+	c. Philips <br> 
+	</div>
+	</div>
+	
+	<form>
+	<input type="text" class="guess" id="guess1">
+	<input type="submit" value="check answer" class="answer" onclick="checkAnswer('b.', '#guess1')"> <br> <br>
+	</form>
+	
+	<div class="question">
+	Why were symbols chosen for the Playstation controller?<br>
+	<div class="choicesSize">
+	a. Easier to remember <br>
+	b. Uniqueness <br>
+	c. Aesthetic appeal <br> 
+	</div>
+	</div>
+	
+	<form>
+	<input type="text" class="guess" id="guess2">
+	<input type="submit" value="check answer" class="answer" onclick="checkAnswer('a.', '#guess2')"> <br> <br>
+	</form>
+	
+	<div class="question">
+	What game did Ken Kutaragi, founder of Playstation, despise?<br>
+	<div class="choicesSize">
+	a. Tomb Raider <br>
+	b. Uncharted <br>
+	c. Crash Bandicoot <br> 
+	</div>
+	</div>
+	
+	<form>
+	<input type="text" class="guess" id="guess3">
+	<input type="submit" value="check answer" class="answer" onclick="checkAnswer('c.', '#guess3')"> <br> <br>
+	</form>
+	
+	<img src="questionmark.png" class="questionmark" width="50" height="50">
+	
+	</aside>
+	
+	<main class="othermain">
+	
+	<form>
+	<fieldset> <legend> Choose contents </legend>
+	<input type="checkbox" id="checkboxPlaystation" onchange="contentDisplay('#playstation', '#checkboxPlaystation')" checked> Playstation
+	<input type="checkbox" id="checkboxPlaystation2" onchange="contentDisplay('#playstation2', '#checkboxPlaystation2')" checked> Playstation 2
+	<input type="checkbox" id="checkboxPlaystation3" onchange="contentDisplay('#playstation3', '#checkboxPlaystation3')" checked> Playstation 3
+	<input type="checkbox" id="checkboxPlaystation4" onchange="contentDisplay('#playstation4', '#checkboxPlaystation4')" checked> Playstation 4
+    </fieldset>
+	</form>
+	
+	<div id="playstation">
+	<h1> Playstation </h1>
+	<p> <img  class="floatright"src="playstation.jpg" width="35%"> The <a href="https://en.wikipedia.org/wiki/PlayStation_(console)"><span class="bold">Playstation</span></a> was
+       Sony's first ever console, released on December 3, 1994. The console used optical discs instead of cartridges, 
+	   and placed emphasis on 3D gaming. The console had the ability to play audio CDs.The console's controller used
+	   four directional buttons instead of a d-pad. The console sold 102 million units worldwide. </p> 
+	</div>
+	
+	<div id="playstation2">
+	<h1> Playstation 2 </h1>
+	<img class="floatright" src="playstation2.png" width="35%">
+	<p>The <a href="https://en.wikipedia.org/wiki/PlayStation_2"><span class="bold">Playstation 2</span></a> was the successor 
+	   to the Playstation, released on March 4, 2000. The console offered backwards compatibility with Playstation games and
+       had a built-in DVD player. The console offered online gaming in 2002 with the Playstation Network Adapter, being
+       for some first-party titles. The console is the best-selling video game console ever, selling 155 million units worldwide. </p>
+	</div>
+	
+	<div id="playstation3">
+	<h1> Playstation 3 </h1>
+	<img class="floatright" src="playstation3.jpg" width="35%">
+	<p>The <a href="https://en.wikipedia.org/wiki/PlayStation_3"><span class="bold">Playstation 3</span></a> was the successor 
+	   to the Playstation 2, released on November 11, 2006. It was the first console to use Blu-ray Discs and the first Playstation
+       console to use Sony's social gaming service called Playstation Network. The console supported the backwards compatibility of
+       PS2 games. The console has sold over 80 million units worldwide.	   </p>
+	</div>
+
+	<div id="playstation4">
+	<h1> Playstation 4 </h1>
+	<img class="floatright" src="playstation4.jpg" width="35%">
+	<p>The <a href="https://en.wikipedia.org/wiki/PlayStation_4"><span class="bold">Playstation 4</span></a> is the successor 
+	   to the Playstation 3, released on November 15, 2013. The consoles places an increased emphasis on social interaction and 
+       integration with other devices and services, having the ability to stream gameplay online or to friends. The console's 
+	   controller was redesigned and improved over the PS3's, with improved buttons and analog sticks and an integrated touchpad.
+       The console supports high-dynamic-range color and virtual reality. An upgraded PS4,the Playstation Pro, was released in 2016 
+	   that supports 4K games. The console has sold 74 million units worldwide.	   </p>
+	</div>
+
+	<table id="table">
+		<caption> Popular Sony Franchises </caption>
+		<tr>	
+			<th> Sony Franchise </th>
+			<th> Genre </th>
+		</tr>
+		<tr>
+			<td> God of War </td>
+			<td> Action/Adventure </td>
+		</tr>
+		<tr>
+			<td> Uncharted </td>
+			<td> Action/Adventure </td>
+		</tr>
+		<tr>
+			<td> Gran Turismo </td>
+			<td> Racing </td>
+		</tr>
+		<tr>
+			<td> Crash Bandicoot </td>
+			<td> Platform/Racing </td>
+		</tr>
+		<tr>
+			<td> Killzone </td>
+			<td> First-person Shooter </td>
+		</tr>
+	</table>
+	
+	</main>
+	
+	<footer>
+	kfarragher21@jcu.edu<br>
+	&copy;Kevin Farragher
+	</footer>
+	
+</div>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Nintendo</title>
+    <link rel="stylesheet" href="projectcss.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+	
+	function checkAnswer(correctAnswer, questionNumber){
+	var guess=document.querySelector(questionNumber);
+	if(guess.value==correctAnswer) {
+	alert("Correct!");
+	}
+	else{
+	alert( "Wrong. The answer is " + correctAnswer);
+	}
+	}
+
+	function contentDisplay(videoGameConsole, checkConsole) {
+	var content=document.querySelector(videoGameConsole);
+	var check=document.querySelector(checkConsole);
+	if(check.checked) {
+	content.style.display="block";
+	}
+	else{
+	content.style.display="none";
+	}
+	}
+	
+	</script>
+</head>
+ 
+<body>
+<div id="wrapper">
+    
+	<header>
+	<span class="fadeinheader"> Nintendo </span>
+	</header>
+	
+	<nav>
+	<ul>
+	<li> <a href="index.html"> Home </a> </li>
+	<li> <a href="microsoft.html"> Microsoft </a> </li>
+	<li> <a href="nintendo.html"> Nintendo </a> </li>
+	<li> <a href="sony.html"> Sony </a> </li>
+	</ul>
+	<img src="nintendologo.png" class="shakeimage" width="125px" height="50px">
+	</nav>
+	
+	<aside>
+	<h3>Trivia Questions</h3>
+	<div class="question">
+	How long was Hiroshi Yamauchi, the original Nintendo founder, president of Nintendo?<br>
+	<div class="choicesSize">
+	a. 10 years <br>
+	b. 56 years	<br>
+	c. 32 years <br> 
+	</div>
+	</div>
+	
+	<form>
+	<input type="text" class="guess" id="guess1">
+	<input type="submit" value="check answer" class="answer" onclick="checkAnswer('b.', '#guess1')"> <br> <br>
+	</form>
+	
+	<div class="question">
+	Which pro baseball team did Nintendo become majority owner of in 1992?<br>
+	<div class="choicesSize">
+	a. Seattle Mariners <br>
+	b. Oakland Athletics <br>
+	c. Kansas City Royals <br> 
+	</div>
+	</div>
+	
+	<form>
+	<input type="text" class="guess" id="guess2">
+	<input type="submit" value="check answer" class="answer" onclick="checkAnswer('a.', '#guess2')"> <br> <br>
+	</form>
+	
+	<div class="question">
+	What was the first Nintendo game to have a "save game" feature?<br>
+	<div class="choicesSize">
+	a. Final Fantasy <br>
+	b. Metroid	<br>
+	c. The Legend of Zelda <br> 
+	</div>
+	</div>
+	
+	<form>
+	<input type="text" class="guess" id="guess3">
+	<input type="submit" value="check answer" class="answer" onclick="checkAnswer('c.', '#guess3')"> <br> <br>
+	</form>
+	
+	<img src="questionmark.png" class="questionmark" width="50" height="50">
+	</aside>
+	
+	<main class="othermain">
+	
+	<form>
+	<fieldset> <legend> Choose contents </legend>
+	<input type="checkbox" id="checkboxGamecube" onchange="contentDisplay('#gamecube', '#checkboxGamecube')" checked> GameCube
+	<input type="checkbox" id="checkboxWii" onchange="contentDisplay('#wii', '#checkboxWii')" checked> Wii
+	<input type="checkbox" id="checkboxWiiU" onchange="contentDisplay('#wiiu', '#checkboxWiiU')" checked> Wii U
+	<input type="checkbox" id="checkboxNintendoSwitch" onchange="contentDisplay('#nintendoswitch', '#checkboxNintendoSwitch')" checked> Nintendo Switch
+	</fieldset>
+	</form>
+	
+	<div id="gamecube">
+	<h1> GameCube </h1>
+	<img class="floatright"src="gamecube.jpg" width="35%">
+	<p>The <a href="https://en.wikipedia.org/wiki/GameCube"><span class="bold">GameCube</span></a> was the successor 
+	   to the Nintendo 64, released on September 14, 2001. The console is the first to Nintendo console to use optical 
+	   discs, similar to miniDVD format and had a small size. The console supported online gaming for only a small number
+       of games. The console was praised for its controller, extensive software library, and high-quality games, but was
+       criticized for its exterior design and lack of features. The console has sold 21 million units worldwide. </p> 
+	</div>
+	
+	<div id="wii">
+	<h1> Wii </h1>
+	<img class="floatright" src="wii.jpg" width="35%" height="150px" >
+	<p>The <a href="https://en.wikipedia.org/wiki/Wii"><span class="bold">Wii</span></a> was the successor 
+	   to the GameCube, released on November 19, 2006. The console targeted a broad demographic. The console 
+	   introduced a controller that could be used as a handheld pointing device and detect movement in three 
+	   dimensions. the console featured a game download service called "Virtual Console", featuring emulated games
+       from past Nintendo systems. It supported backwards-compatibility with GameCube games. The console has sold
+       101 million units worldwide. </p>
+	</div>
+	
+	<div id="wiiu">
+	<h1> Wii U </h1>
+	<img class="floatright" src="wiiu.png" width="35%">
+	<p> The <a href="https://en.wikipedia.org/wiki/Wii_U"><span class="bold">Wii U</span></a> was the successor 
+	   to the Wii, released on November 8, 2012. The console was the first of Nintendo's to support HD graphics.
+	   The system's primary controller is the Wii U Gamepad, featuring a touchscreen and a combination of directional
+       buttons, analog sticks, and action buttons. The screen  of the Wii U Gamepad can be used to supplement
+	   to the main display on the TV or to play certain games independently from the TV. The consoler offers backwards
+       compatibility with the Wii games. The console's online features revolve around the Nintendo Network Platform
+       and Miiverse, a social networking service that allows users to share content. The console has sold 13 million
+       units worldwide.	</p>
+	</div>
+
+	<div id="nintendoswitch">
+	<h1> Nintendo Switch </h1>
+	<img class="floatright" src="nintendoswitch.jpg" width="35%">
+	<p>The <a href="https://en.wikipedia.org/wiki/Nintendo_Switch"><span class="bold">Nintendo Switch</span></a> was the successor 
+	   to the Wii U, released on March 3, 2017. The console is a hybrid, designed primarily as a home console but also can be used
+       as a handheld. The console uses wireless Joy-Con controllers, which are able to attach to both sides of the console for
+       handheld-style play. the console supports online gaming, and its games are available digitally, via the Nintendo eShop, and 
+	   physically. The console's design is aimed at a wide demographic through its multiple modes of use. The console has sold 15 
+       million units worldwide.	   </p>
+	</div>
+
+	<table id="table">
+		<caption> Popular Nintendo Franchises </caption>
+		<tr>	
+			<th> Nintendo Franchise </th>
+			<th> Genre </th>
+		</tr>
+		<tr>
+			<td> Mario </td>
+			<td> Fantasy/Action </td>
+		</tr>
+		<tr>
+			<td> Zelda </td>
+			<td> Action/Adventure </td>
+		</tr>
+		<tr>
+			<td> Kirby </td>
+			<td> Action </td>
+		</tr>
+		<tr>
+			<td> Donkey Kong </td>
+			<td> Adventure/Puzzle </td>
+		</tr>
+		<tr>
+			<td> Pokemon </td>
+			<td> Fighting/Strategy </td>
+		</tr>
+	</table>
+	
+	</main>
+	
+	<footer>
+	kfarragher21@jcu.edu<br>
+	&copy;Kevin Farragher
+	</footer>
+	
+</div>
+</body>
+
+</html>
